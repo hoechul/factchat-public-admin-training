@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  /* FactChat(factchat.kr) 배포 사이트에서 확인한 실제 브랜드 컬러 토큰 */
+  --fc-blue: #1751d0;
+  --fc-blue-dark: #242b90;
+  --fc-blue-mid: #3a46c4;
+  --fc-blue-soft: #6c92e4;
+  --fc-blue-bg: #eff4ff;
+  --fc-blue-bg-2: #eaf1ff;
+
+  --fc-ink: #121315;
+  --fc-ink-2: #1d1f27;
+  --fc-ink-3: #2a2d38;
+
+  --fc-gray: #595e6a;
+  --fc-gray-2: #7f8493;
+  --fc-gray-3: #9499a5;
+  --fc-gray-4: #b7bcc8;
+
+  --fc-line: #e5e7eb;
+  --fc-line-2: #eaecef;
+  --fc-surface: #f4f5f6;
+
+  --background: #ffffff;
+  --foreground: var(--fc-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-fc-blue: var(--fc-blue);
+  --color-fc-blue-dark: var(--fc-blue-dark);
+  --color-fc-blue-mid: var(--fc-blue-mid);
+  --color-fc-blue-soft: var(--fc-blue-soft);
+  --color-fc-blue-bg: var(--fc-blue-bg);
+  --color-fc-blue-bg-2: var(--fc-blue-bg-2);
+
+  --color-fc-ink: var(--fc-ink);
+  --color-fc-ink-2: var(--fc-ink-2);
+  --color-fc-ink-3: var(--fc-ink-3);
+
+  --color-fc-gray: var(--fc-gray);
+  --color-fc-gray-2: var(--fc-gray-2);
+  --color-fc-gray-3: var(--fc-gray-3);
+  --color-fc-gray-4: var(--fc-gray-4);
+
+  --color-fc-line: var(--fc-line);
+  --color-fc-line-2: var(--fc-line-2);
+  --color-fc-surface: var(--fc-surface);
+
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* factchat.kr 히어로 섹션의 conic-gradient 배경을 재해석한 그라디언트 */
+.fc-hero-bg {
+  background-color: var(--fc-ink);
+  background-image:
+    radial-gradient(60% 50% at 15% 0%, rgba(148, 176, 236, 0.35) 0%, rgba(148, 176, 236, 0) 60%),
+    conic-gradient(
+      from 180deg at 50% 50%,
+      #3a46c4 0deg,
+      #d2d6f6 120.6deg,
+      #1751d0 250.2deg,
+      #242b90 360deg
+    );
+  background-blend-mode: normal;
+}
+
+.fc-hero-overlay {
+  background: linear-gradient(180deg, rgba(18, 19, 21, 0.72) 0%, rgba(18, 19, 21, 0.88) 100%);
+}
+
+.fc-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.fc-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--fc-gray-4);
+  border-radius: 999px;
+}
+
+@keyframes fc-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fc-copied-pop {
+  animation: fc-fade-up 0.18s ease-out;
+}
