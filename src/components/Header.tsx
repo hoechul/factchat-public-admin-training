@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const NAV = [
-  { href: "#overview", label: "교육 개요" },
+  { href: "#overview", label: "실습교안" },
+  { href: "/studio", label: "챗봇·워크플로우 실습" },
   { href: "#timeline", label: "60분 타임라인" },
   { href: "#modules", label: "실습 모듈" },
   { href: "#manual", label: "사용자 매뉴얼" },
-  { href: "/studio", label: "챗봇·워크플로우 실습" },
 ];
 
 export function Header() {

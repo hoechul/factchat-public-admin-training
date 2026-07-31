@@ -61,9 +61,9 @@ export default function Home() {
       </section>
 
       <main className="mx-auto max-w-6xl space-y-20 px-5 py-16 sm:px-8 sm:py-20">
-        {/* 교육 개요 */}
+        {/* 실습교안 */}
         <section id="overview" className="scroll-mt-24">
-          <h2 className="text-2xl font-extrabold text-fc-ink sm:text-3xl">교육 개요</h2>
+          <h2 className="text-2xl font-extrabold text-fc-ink sm:text-3xl">실습교안</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-fc-line-2 bg-white p-6">
               <dl className="space-y-4 text-sm">
