@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Timeline } from "@/components/Timeline";
@@ -99,18 +98,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* 프롬프트는 대화입니다 */}
-        <div className="overflow-hidden rounded-2xl border border-fc-line-2 bg-white">
-          <Image
-            src="/images/start.png"
-            alt="프롬프트는 처음 만나는 연인과의 대화와 같습니다. 맥락을 알려주고, 결과를 확인해 피드백하고, 대화를 이어가며 원하는 결과에 맞춰갑니다."
-            width={1536}
-            height={1024}
-            sizes="(max-width: 768px) 100vw, 1152px"
-            className="h-auto w-full"
-          />
-        </div>
 
         {/* 타임라인 */}
         <section id="timeline" className="scroll-mt-24">

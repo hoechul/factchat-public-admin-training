@@ -47,5 +47,5 @@ next-env.d.ts
 __pycache__/
 *.pyc
 
-# source asset dropped at repo root by the user; served copy lives in public/images/
+# source asset dropped at repo root by the user; not part of the site
 /start.png
