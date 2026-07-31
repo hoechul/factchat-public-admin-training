@@ -18,10 +18,35 @@ import {
   studioCautions,
 } from "@/data/studio";
 
+const STUDIO_TITLE = "챗봇 · 워크플로우 실습 60분 | FactChat STUDIO";
+const STUDIO_DESCRIPTION =
+  "공공기관 행정주무관을 위한 FactChat 스튜디오 실습. 60분 동안 민원안내 챗봇과 부서 분류 워크플로우 챗봇을 직접 만들어 봅니다.";
+
 export const metadata: Metadata = {
-  title: "챗봇 · 워크플로우 실습 60분 | FactChat STUDIO",
-  description:
-    "공공기관 행정주무관을 위한 FactChat 스튜디오 실습. 60분 동안 민원안내 챗봇과 부서 분류 워크플로우 챗봇을 직접 만들어 봅니다.",
+  title: STUDIO_TITLE,
+  description: STUDIO_DESCRIPTION,
+  openGraph: {
+    title: STUDIO_TITLE,
+    description: STUDIO_DESCRIPTION,
+    url: "/studio",
+    siteName: "FactChat 실무교육",
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "FactChat으로 익히는 행정 실무 자동화 — 강의 0분, 실습 60분",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: STUDIO_TITLE,
+    description: STUDIO_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
 };
 
 export default function StudioPage() {
