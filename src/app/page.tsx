@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Timeline } from "@/components/Timeline";
@@ -120,6 +121,30 @@ export default function Home() {
             {modules.map((m) => (
               <ModuleCard key={m.no} module={m} />
             ))}
+          </div>
+        </section>
+
+        {/* 다음 단계: 챗봇·워크플로우 실습 */}
+        <section className="rounded-2xl bg-fc-ink px-6 py-8 sm:px-10 sm:py-10">
+          <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/80">
+                다음 단계 · 60분 추가 실습
+              </span>
+              <h3 className="mt-3 text-xl font-extrabold text-white sm:text-2xl">
+                챗봇 · 워크플로우로 우리 기관 전용 상담봇 만들기
+              </h3>
+              <p className="mt-2 max-w-xl text-[13.5px] leading-relaxed text-white/70">
+                오늘 실습을 마쳤다면, 민원안내 챗봇을 직접 만들고 부서별 업무를 자동 분류·라우팅하는
+                워크플로우 챗봇까지 완성해 보는 심화 실습으로 이어가 보세요.
+              </p>
+            </div>
+            <Link
+              href="/studio"
+              className="shrink-0 rounded-full bg-white px-6 py-3 text-sm font-bold text-fc-ink transition hover:bg-white/90"
+            >
+              챗봇·워크플로우 실습 시작 →
+            </Link>
           </div>
         </section>
 

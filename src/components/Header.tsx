@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 const NAV = [
   { href: "#overview", label: "교육 개요" },
   { href: "#timeline", label: "60분 타임라인" },
   { href: "#modules", label: "실습 모듈" },
   { href: "#manual", label: "사용자 매뉴얼" },
+  { href: "/studio", label: "챗봇·워크플로우 실습" },
 ];
 
 export function Header() {
@@ -17,11 +20,17 @@ export function Header() {
           </span>
         </a>
         <nav className="hidden items-center gap-6 md:flex">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-sm font-medium text-fc-gray hover:text-fc-blue">
-              {n.label}
-            </a>
-          ))}
+          {NAV.map((n) =>
+            n.href.startsWith("/") ? (
+              <Link key={n.href} href={n.href} className="text-sm font-medium text-fc-gray hover:text-fc-blue">
+                {n.label}
+              </Link>
+            ) : (
+              <a key={n.href} href={n.href} className="text-sm font-medium text-fc-gray hover:text-fc-blue">
+                {n.label}
+              </a>
+            )
+          )}
         </nav>
         <a
           href="#modules"
